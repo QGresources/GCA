@@ -103,7 +103,7 @@ knitr::include_graphics("GCstat.png")
 ```{r, results='hide', eval = FALSE}
 install.packages("devtools")
 library(devtools)
-install_github('HaipengU/GCA')
+install_github('QGresources/GCA')
 ```
 
 ### Load all packages used in this vignette. 
@@ -132,8 +132,7 @@ sigma2e <- 0.4 # residual variance
 Below we construct the incidence matrix of fixed effects and a genomic relationship matrix. 
 ```{r}
 X2 <- model.matrix(~ -1 + factor(cattle.pheno$Unit) + factor(cattle.pheno$Sex)) # incidence matrix of unit effect and sex
-G <- computeG(cattle.W, maf = 0.05) # genomic relationship matrix; markers with minor allele frequency (maf) 
-                                    # less than 0.05 are removed
+G <- computeG(cattle.W, maf = 0.05) # genomic relationship matrix; markers with minor allele frequency (maf) less than 0.05 are removed
 
 ```
 
@@ -384,16 +383,15 @@ PASum <- apply(CattleSIM[, 7: 11], 2, function(x) PA(df = CattleSIM$Phen, MU = x
 #### Relationship between connectedness measures and prediction accuracies
 The following correlation plots show the relationship between connectedness and prediction accuracy. The plot on the left indicates a positive correlation between PEVD_GrpAve and prediction accuracy, where an increased correlation is observed as more individuals from the same cluster are shared between the training and testing sets. However,  the plot in the right indicates CD_GrpAve increased up to Scenario 3 and then decreased at Scenario 4. This decreasing trend is due to CD penalizes the connectedness measure when the genetic variability among population is reduced as reported by previous studies [@yu2017; @yu2018]
 ```{r}
-dfPEVD <- data.frame("PEVD" = PEVD_GrpAve, 'PA' = PASum, 
-"Scenario" = paste('S', 1:5, sep = ''))
-dfCD <- data.frame("CD" = CD_GrpAve, 'PA' = PASum, 
-"Scenario" = paste('S', 1:5, sep = ''))
-p1 <- ggplot(dfPEVD,  aes(PEVD, PA)) + geom_point(aes(shape = factor(Scenario)), color = "blue", size = 3) + 
+dfPEVD <- data.frame("PEVD" = PEVD_GrpAve, 'Prediction accuracy' = PASum, 
+"Scenario" = paste('S', 1:5, sep = ''), check.names = FALSE)
+dfCD <- data.frame("CD" = CD_GrpAve, 'Prediction accuracy' = PASum, 
+"Scenario" = paste('S', 1:5, sep = ''), check.names = FALSE)
+p1 <- ggplot(dfPEVD,  aes(PEVD, `Prediction accuracy`)) + geom_point(aes(shape = factor(Scenario)), color = "blue", size = 3) + 
   xlab("PEVD") + labs(shape="Scenario")
-p2 <- ggplot(dfCD,  aes(CD, PA)) + geom_point(aes(shape = factor(Scenario)), color="red", size = 3) + 
+p2 <- ggplot(dfCD,  aes(CD, `Prediction accuracy`)) + geom_point(aes(shape = factor(Scenario)), color="red", size = 3) + 
   labs(shape = "Scenario")
 grid.arrange(p1, p2, nrow = 1, widths = c(10, 10), heights = 4)
-
 ```
 
 ## Authors
