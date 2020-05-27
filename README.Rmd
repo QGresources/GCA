@@ -1,0 +1,55 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit README.Rmd (this file) -->
+
+```{r setup, echo = FALSE, warning = FALSE}
+chooseCRANmirror(graphics = FALSE, ind = 1)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# GCA <img src="man/figures/GCA.png" height="200" align="right"/>
+
+[![Build Status](https://travis-ci.org/HaipengU/GCA.svg?branch=master)](https://travis-ci.org/HaipengU/GCA)
+
+## Overview 
+An R package for genetic connectedness analysis using pedigree and genomic data. 
+
+## Installation
+GCA is currently available in Github, and can be installed with devtools package: 
+
+1. Install `devtools` package from CRAN. 
+```{r, warning = FALSE, message = FALSE, results = 'hide', eval = FALSE}
+install.packages("devtools")
+```
+
+2. Load the `devtools` package.
+```{r, warning = FALSE, results = 'hide', eval = FALSE}
+library(devtools)
+```
+
+3. Install `GCA` package from Github.
+```{r, warning = FALSE, results = 'hide', message = FALSE, eval = FALSE}
+install_github('HaipengU/GCA')
+```
+
+4. Load `GCA` package. 
+```{r, warning = FALSE, results = 'hide', eval = FALSE}
+library(GCA)
+```
+
+### Fail to load documentation (e.g., `?GCA`) after reinstalling GCA.
+```{r,warning = FALSE, results = 'hide', eval = FALSE}
+.rs.restartR() 
+```
+
+## Documentation
+[Vignette](https://qgresources.github.io/GCA_Vignette/GCA.html)
+
+
+## Reference
+Yu H and Morota G. 2019. GCA: An R Package for Genetic Connectedness Analysis Using Pedigree and Genomic Data. bioRxiv. [https://doi.org/10.1101/696419](https://doi.org/10.1101/696419)

@@ -1,0 +1,16 @@
+Package: GCA
+Type: Package
+Title: Genetic Connectedness Analysis
+Version: 0.1.0
+Date: 2019-02-08
+Author: Haipeng Yu, Gota Morota
+Maintainer: Haipeng Yu <haipengyu@vt.edu>
+Description: Genetic connectedness analysis using pedigree and genomic data.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Suggests: prettydoc, knitr, rmarkdown, BGLR, corrplot, ggplot2, gridExtra
+VignetteBuilder: knitr, rmarkdown, BGLR, corrplot, ggplot2, gridExtra
+Imports: Rcpp, stats
+LinkingTo: Rcpp, RcppEigen
