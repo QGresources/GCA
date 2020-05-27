@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 
 # GCA <img src="man/figures/GCA.png" height="200" align="right"/>
 
-[![Build Status](https://travis-ci.org/HaipengU/GCA.svg?branch=master)](https://travis-ci.org/HaipengU/GCA)
+#[![Build Status](https://travis-ci.org/HaipengU/GCA.svg?branch=master)](https://travis-ci.org/HaipengU/GCA)
 
 ## Overview 
 An R package for genetic connectedness analysis using pedigree and genomic data. 
@@ -34,7 +34,7 @@ library(devtools)
 
 3. Install `GCA` package from Github.
 ```{r, warning = FALSE, results = 'hide', message = FALSE, eval = FALSE}
-install_github('HaipengU/GCA')
+install_github('QGresources/GCA')
 ```
 
 4. Load `GCA` package. 

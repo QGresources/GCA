@@ -1,0 +1,12 @@
+language: r
+warnings_are_errors: false
+sudo: false
+
+# do not build vignettes(time-consumption)
+r_build_args: --no-build-vignettes --no-manual
+r_check_args: --no-build-vignettes --no-manual --timings
+
+notifications:
+  email:
+    on_success: change
+    on_failure: alway
