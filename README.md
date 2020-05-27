@@ -3,7 +3,7 @@
 
 # GCA <img src="man/figures/GCA.png" height="200" align="right"/>
 
-[![Build
+\#[![Build
 Status](https://travis-ci.org/HaipengU/GCA.svg?branch=master)](https://travis-ci.org/HaipengU/GCA)
 
 ## Overview
@@ -37,7 +37,7 @@ library(devtools)
 <!-- end list -->
 
 ``` r
-install_github('HaipengU/GCA')
+install_github('QGresources/GCA')
 ```
 
 4.  Load `GCA` package.
