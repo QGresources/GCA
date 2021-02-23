@@ -51,4 +51,4 @@ library(GCA)
 
 
 ## Reference
-Yu H and Morota G. 2019. GCA: An R Package for Genetic Connectedness Analysis Using Pedigree and Genomic Data. bioRxiv. [https://doi.org/10.1101/696419](https://doi.org/10.1101/696419)
+Haipeng Yu and Gota Morota. GCA: An R package for genetic connectedness analysis using pedigree and genomic data. BMC Genomics, 2021. [10.1186/s12864-021-07414-7](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-021-07414-7)
