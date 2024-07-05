@@ -3,6 +3,13 @@
 
 # GCA <img src="man/figures/GCA.png" height="200" align="right"/>
 
+## Update: maintenance transition
+
+Starting from July, 2024, the GCA R package will be maintained by the
+[AIAOS Lab at the University of
+Florida](https://github.com/uf-aiaos/GCA). The AIAOS Lab will handle all
+future maintenance, updates, and support for the package.
+
 ## Overview
 
 An R package for genetic connectedness analysis using pedigree and
@@ -15,15 +22,11 @@ package:
 
 1.  Install `devtools` package from CRAN.
 
-<!-- end list -->
-
 ``` r
 install.packages("devtools")
 ```
 
 2.  Load the `devtools` package.
-
-<!-- end list -->
 
 ``` r
 library(devtools)
@@ -31,15 +34,11 @@ library(devtools)
 
 3.  Install `GCA` package from Github.
 
-<!-- end list -->
-
 ``` r
 install_github('QGresources/GCA')
 ```
 
 4.  Load `GCA` package.
-
-<!-- end list -->
 
 ``` r
 library(GCA)
